@@ -29,3 +29,19 @@ Run `ng github-pages:deploy` to deploy to GitHub Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+## Local Setup
+To run with scss ,
+ng set defaults.styleExt scss
+
+To run with another port, To run with ssl
+ng serve --host 0.0.0.0 --port 44000 --ssl=true
+
+
+Normal run
+ng serve --open
+
+Prod run    
+ng serve --aot

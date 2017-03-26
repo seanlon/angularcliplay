@@ -5,16 +5,24 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
+
+ 
+import { HeroDetailComponent } from './hero-detail.component';
+import { HeroesComponent } from './heroes.component';
+import { HeroSearchComponent } from './hero-search.component';
+import { DashboardComponent } from './dashboard.component'; 
+import { AppRoutingModule }     from './app.routing.module';
+
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, FormsModule,HttpModule ,    InMemoryWebApiModule.forRoot(InMemoryDataService), ],
+  declarations: [AppComponent, HeroesComponent, HeroDetailComponent,HeroSearchComponent, DashboardComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+ 
+ 
