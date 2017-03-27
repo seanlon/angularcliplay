@@ -2,10 +2,8 @@
 $color_quill_gray_approx: #d4d4d4;
 $color_mexican_red_approx: brown;
 $color_amber_approx: #ffc107;
-$color_active: #000;
 $color_shamrock_approx: hsla(153, 57%, 51%, 1);
 $white: white;
-$grey:#cccccc;
  
 
 .breadcrumb {
@@ -24,27 +22,25 @@ li {
 
 	&.active a {
 		background:$color_mexican_red_approx;                   /* fallback color */
-		background: $color_active;
-		color:$white;
+		background: $color_amber_approx;
 	}
 	&.completed a {
 		background:$color_mexican_red_approx;                   /* fallback color */
 		background: $color_shamrock_approx;
 	}
 	&.active a:after {
-		border-left: 30px solid $color_active;
+		border-left: 30px solid $color_amber_approx;
 	}
 	&.completed a:after {
 		border-left: 30px solid $color_shamrock_approx;
 	}
 	a {
-		color:  $grey;
+		color: $white;
 		text-decoration: none;
 		padding: 15px 0 15px 45px;
 		position: relative;
 		display: block;
 		float: left;
-		
 	}
 	a:after {
 		content: " ";
@@ -79,9 +75,9 @@ li {
 		padding-left: 15px;
 	}
 	a:hover {
-		background: $color_active;
+		background: $color_amber_approx;
 	}
 	a:hover:after {
-		border-left-color: $color_active !important;
+		border-left-color: $color_amber_approx !important;
 	}
 }
