@@ -26,6 +26,7 @@ li {
 		background:$color_mexican_red_approx;                   /* fallback color */
 		background: $color_active;
 		color:$white;
+		border: solid 1px $color_active;
 	}
 	&.completed a {
 		background:$color_mexican_red_approx;                   /* fallback color */
@@ -45,6 +46,8 @@ li {
 		display: block;
 		float: left;
 		
+		border: 1px solid #cccccc;
+		background:$white;
 	}
 	a:after {
 		content: " ";
@@ -54,6 +57,7 @@ li {
 		border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
 		border-bottom: 50px solid transparent;
 		border-left: 30px solid hsla(0, 0%, 83%, 1);
+		border-left: 30px solid $white;
 		position: absolute;
 		top: 50%;
 		margin-top: -50px;
@@ -68,6 +72,7 @@ li {
 		border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
 		border-bottom: 50px solid transparent;
 		border-left: 30px solid $white;
+        border-left:40px solid green;
 		position: absolute;
 		top: 50%;
 		margin-top: -50px;
@@ -80,6 +85,9 @@ li {
 	}
 	a:hover {
 		background: $color_active;
+	}
+	a:after {
+		border-left-color: $white !important;
 	}
 	a:hover:after {
 		border-left-color: $color_active !important;
