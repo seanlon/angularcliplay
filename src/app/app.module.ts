@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 import { AppComponent } from './app.component';
 
 // Imports for loading & configuring the in-memory web api
@@ -19,9 +18,12 @@ import { SwitchComponent } from './switch.component';
 import { AppRoutingModule }     from './app.routing.module';
 
 
+import { ReactiveFormsModule }          from '@angular/forms';
+import { DynamicFormComponent } from './dynamic-form.component';
+import { DynamicFormQuestionComponent } from './dynamic-form-question.component';
 @NgModule({
-  imports: [BrowserModule, AppRoutingModule, FormsModule,HttpModule , InMemoryWebApiModule.forRoot(InMemoryDataService), ],
-  declarations: [AppComponent, HeroesComponent, HeroDetailComponent,HeroSearchComponent, DashboardComponent, SwitchComponent,BreadcrumbComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule,HttpModule , InMemoryWebApiModule.forRoot(InMemoryDataService), ReactiveFormsModule ],
+  declarations: [AppComponent, HeroesComponent, HeroDetailComponent,HeroSearchComponent, DashboardComponent, SwitchComponent,BreadcrumbComponent,  DynamicFormComponent, DynamicFormQuestionComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
